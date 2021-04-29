@@ -1,0 +1,30 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: org.apache.commons:commons-compress
+    versions:
+    - "1.19"
+  - dependency-name: org.apache.commons:commons-lang3
+    versions:
+    - "3.11"
+  - dependency-name: org.apache.maven.plugins:maven-plugin-plugin
+    versions:
+    - 3.6.0
+  - dependency-name: org.apache.maven.plugins:maven-invoker-plugin
+    versions:
+    - 3.2.1
+  - dependency-name: org.apache.maven:maven-plugin-api
+    versions:
+    - 3.6.3
+  - dependency-name: org.apache.maven:maven-core
+    versions:
+    - 3.6.3
+  - dependency-name: org.apache.maven.plugin-tools:maven-plugin-annotations
+    versions:
+    - 3.6.0
